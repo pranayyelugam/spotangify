@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { SpotifyService } from '../spotifysearch.service'; 
-import {Artist} from '../Artist';
-import {Album} from '../Album';
+import {Artists} from '../artists';
+import {Albums} from '../albums';
 import {ActivatedRoute} from '@angular/router';
 @Component({
   selector: 'app-artist',
@@ -11,8 +11,8 @@ import {ActivatedRoute} from '@angular/router';
 })
 export class ArtistComponent implements OnInit{ 
     id:string;
-    artist: Artist[];
-    albums:Album[];
+    artist: Artists[];
+    albums:Albums[];
     
     constructor(
         private _spotifyService:SpotifyService,

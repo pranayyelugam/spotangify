@@ -1,20 +1,19 @@
 import { Component, OnInit } from '@angular/core';
-import { SpotifyService } from '../spotifysearch.service'; 
+import { SearchserviceService } from '../service/searchservice.service';
 import {Artists} from '../artists';
 import {Albums} from '../albums';
 import {ActivatedRoute} from '@angular/router';
 @Component({
-  selector: 'app-albums',
-  templateUrl: './albums.component.html',
-  styleUrls: ['./albums.component.css']
+  selector: 'app-album',
+  templateUrl: './album.component.html',
+  styleUrls: ['./album.component.css']
 })
-
-export class AlbumsComponent implements OnInit{ 
+export class AlbumComponent { 
     id:string;
     album:Albums[];
     
     constructor(
-        private _spotifyService:SpotifyService,
+        private _spotifyService:SearchserviceService,
         private _route:ActivatedRoute){
         
     }
